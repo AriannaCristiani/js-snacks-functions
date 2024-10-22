@@ -5,15 +5,13 @@ const name = 'Mario';
 
 // Dichiara la funzione qui.
 
-
-function saluta() {
+function sayHello(person){
+    return `Ciao ${person}`;
 }
-
 
 
 // Invoca la funzione qui e stampa il risultato in console
 
-saluta ('Ciao')
-console.log(`${name}`)
+console.log (sayHello(name))
 
 //Risultato atteso se si passa 'Mario': // ciao Mario

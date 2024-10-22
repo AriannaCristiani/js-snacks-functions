@@ -7,25 +7,27 @@ console.log(names)
 
 // Dichiara la funzione qui.
 
-function takeOneLetter () {
+function takeOneLetter (array) {
 
+    const result = []
+    
+    for (let i = 0; i < array.length; i++) {
+		console.log(array[i][0]);
+        
+        const element = array [i];
+        const firstLetter = element [0] ;
+
+        result.push (firstLetter)
+      
+	} 
+
+    return result;
 }
 
 // Invoca la funzione qui e stampa il risultato in console
 
-//Per ogni nome:
-//  -stampa unicamente l'iniziale
 
-for (let i = 0; i < names.length; i++) {
-		//console.log(i)
-		let fullName = names [i]
-        // console.log(i, fullName)
-
-        takeOneLetter = fullName.charAt(0)
-        console.log(takeOneLetter)
-	} 
-
-   
+   console.log(takeOneLetter(names))
 
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
