@@ -5,31 +5,33 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 // Dichiara la funzione qui.
 
-function onlyletterA () {
+function onlyletterA (array, letter='') {
+const result = [];
+
+for (i=0 ; i<array.length ; i ++){
+    // console.log(i)
+
+    const element = array[i].toLowerCase();
+    // console.log(element);
+
+    if (element[0] === letter.toLocaleLowerCase()){
+        // console.log(element, true)
+        result.push(element)
+    } else {
+        // console.log(element, false)
+    }
+    
+    
+}
+
+return result;
 
 }
 
 // Invoca la funzione qui e stampa il risultato in console
 
-//Seleziona dall'array solo i nomi che iniziano con la lettera 'A'
-//  -SE inizia con 'A' stampalo in console
 
-for (i=0 ; i<names.length ; i ++){
-    // console.log(i)
-
-    let fullNames = names [i]
-    // console.log(fullNames)
-
-    onlyletterA = fullNames.charAt(0) === 'A';
-    // console.log(onlyletterA)
-
-    if (onlyletterA === true){
-        console.log(fullNames)
-        
-    }
-
-}
-
+console.log (onlyletterA  (names,'A'))
 
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
